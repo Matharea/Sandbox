@@ -1,9 +1,8 @@
 package fr.gorelpaul.bacsable;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -80,11 +79,6 @@ public class AnimationsFragment extends Fragment implements AnimationPOC.OnFragm
         return v;
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-
     public static class PlaceholderFragment extends Fragment {
         /**
          * The fragment argument representing the section number for this
@@ -127,12 +121,15 @@ public class AnimationsFragment extends Fragment implements AnimationPOC.OnFragm
             super( fm );
         }
 
+        @NonNull
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if (position == 0)
                 return new AnimationPOC();
+            else if (position == 1)
+                return new TextAnimation();
             else
                 return PlaceholderFragment.newInstance( position + 1);
 

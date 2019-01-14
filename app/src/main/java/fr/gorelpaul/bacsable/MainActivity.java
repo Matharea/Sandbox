@@ -12,7 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.view.Menu;
+
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
